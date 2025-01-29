@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+.game-container {
+    position: relative;
+    width: 600px;
+}
+
+#game {
+    width: 600px;
+    height: 200px;
+    border: 2px solid #333;
+    background: #fff;
+    overflow: hidden;
+}
+
+#score {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.dino {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 60px;
+    height: 60px;
+    background: url('assets/dino-run.png') 0 0;
+    animation: run 0.3s steps(2) infinite;
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 0;
+    width: 30px;
+    height: 60px;
+    background: url('assets/cactus.png');
+}
+
+@keyframes run {
+    from { background-position: 0 0; }
+    to { background-position: -120px 0; }
+}
+
+.controls {
+    margin-top: 20px;
+    text-align: center;
+}
